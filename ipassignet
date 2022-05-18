@@ -1,4 +1,4 @@
 grep -v $1 /etc/hosts > tmpfile.txt ; mv tmpfile.txt /etc/hosts
-echo $1 $2 >> /etc/hosts
+echo $2 $1 >> /etc/hosts
 grep -v $1 /root/.ssh/known_hosts > tmpfile2.txt ; mv tmpfile2.txt /root/.ssh/known_hosts
 
