@@ -1,4 +1,6 @@
 #!/bin/bash
+mkdir /yardirbakalim
+cd /yardirbakalim
 yum update -y
 yum install -y bash-completion
 yum install -y epel-release
@@ -17,12 +19,21 @@ wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/trustabaglan
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/risktenal
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/riskeyolla
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/riskebaglan
-chmod 777 trust*
-chmod 777 risk*
 chmod 777 ipassignet
-mv trust* /bin -f
-mv risk* /bin -f
-mv ipassignet /bin -f
+chmod 777 trusttanal
+chmod 777 trustayolla
+chmod 777 trustabaglan
+chmod 777 risktenal
+chmod 777 riskeyolla
+chmod 777 riskebaglan
+mv -f ipassignet /bin 
+mv -f trusttanal /bin 
+mv -f trustayolla /bin 
+mv -f trustabaglan /bin 
+mv -f risktenal /bin 
+mv -f riskeyolla /bin 
+mv -f riskebaglan /bin 
+
 ipassignet $1 $2
 
 ### simdi bundan sonrasi extra yuklemeleri hazirlayan scriptler yukle...lar olacak
@@ -48,16 +59,14 @@ chmod 777 yuklesnapd
 mv yuklesnapd /bin
 
 # yukle idea toolbox
-wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.24.11947.tar.gz
-tar xvf jetbrains-toolbox-1.24.11947.tar.gz
-./jetbrains-toolbox-1.24.11947.tar.gz
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yukleideatoolbox
+chmod 777 yukleideatoolbox
+mv yukleideatoolbox /bin
 
 # yukle virtualbox
-wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo -P /etc/yum.repos.d/
-yum install @development-tools -y
-yum install -y kernel-devel kernel-headers dkms qt5-qtx11extras  elfutils-libelf-devel zlib-devel
-yum install -y VirtualBox-6.1
-usermod -a -G vboxusers tm
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklevirtualbox
+chmod 777 yuklevirtualbox
+mv yuklevirtualbox /bin
 
 
 
