@@ -1,2 +1,3 @@
 ssh -i /home/tm/Documents/riskEnaktar.key opc@riskip
-echo -e toor\ntoor\n|sudo su - 
+echo yes\n
+
