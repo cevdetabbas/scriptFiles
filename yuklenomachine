@@ -1,0 +1,2 @@
+wget https://download.nomachine.com/download/7.7/Linux/nomachine_7.7.4_1_x86_64.rpm
+yum install -y ./nomachine_7.7.4_1_x86_64.rpm
