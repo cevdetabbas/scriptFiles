@@ -1,3 +1,2 @@
 ssh -i /home/tm/Documents/riskEnaktar.key opc@riskip
-echo yes\n
 
