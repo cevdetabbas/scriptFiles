@@ -4,8 +4,10 @@ useradd tm
 echo -e .\n.\n|sudo passwd tm
 wget https://raw.githubusercontent.com/cevdetabbas/Enaktarlar/main/riskEnaktar.key
 mv -f riskEnaktar.key /home/tm/Documents/
+chmod 600 /home/tm/Documents/riskEnaktar.key
 wget https://raw.githubusercontent.com/cevdetabbas/Enaktarlar/main/trustEnaktar.key
 mv -f trustEnaktar.key /home/tm/Documents/
+chmod 600 /home/tm/Documents/trustEnaktar.key
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/ipassignet
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/trusttanal
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/trustayolla
