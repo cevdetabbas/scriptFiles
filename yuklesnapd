@@ -1,0 +1,4 @@
+echo snapd yuklensin
+sudo dnf install snapd -y
+sudo snap install hello-world
+sudo ln -s /var/lib/snapd/snap /snap
