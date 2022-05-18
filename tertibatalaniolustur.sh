@@ -8,10 +8,10 @@ wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/trustayolla
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/trustabaglan
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/risktenal
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/riskeyolla
-wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/risebaglan
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/riskebaglan
 chmod 777 trust*
 chmod 777 risk*
 chmod 777 ipassignet
-mv trust* /bin
-mv risk* /bin
-mv ipassignet /bin
+mv trust* /bin -f
+mv risk* /bin -f
+mv ipassignet /bin -f
