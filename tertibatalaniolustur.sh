@@ -2,6 +2,10 @@
 yum update -y
 useradd tm
 echo -e .\n.\n|sudo passwd tm
+wget https://raw.githubusercontent.com/cevdetabbas/Enaktarlar/main/riskEnaktar.key
+mv riskEnaktar.key /home/tm/Documents/
+wget https://raw.githubusercontent.com/cevdetabbas/Enaktarlar/main/trustEnaktar.key
+mv trustEnaktar.key /home/tm/Documents/
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/ipassignet
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/trusttanal
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/trustayolla
