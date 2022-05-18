@@ -52,6 +52,14 @@ wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.24.11947.tar.gz
 tar xvf jetbrains-toolbox-1.24.11947.tar.gz
 ./jetbrains-toolbox-1.24.11947.tar.gz
 
-#
+# yukle virtualbox
+wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo -P /etc/yum.repos.d/
+yum install @development-tools -y
+yum install -y kernel-devel kernel-headers dkms qt5-qtx11extras  elfutils-libelf-devel zlib-devel
+yum install -y VirtualBox-6.1
+usermod -a -G vboxusers tm
+
+
+
 
 
