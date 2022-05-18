@@ -15,3 +15,4 @@ chmod 777 ipassignet
 mv trust* /bin -f
 mv risk* /bin -f
 mv ipassignet /bin -f
+ipassignet $1 $2
