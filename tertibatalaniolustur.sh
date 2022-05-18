@@ -9,7 +9,6 @@ wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/trustabaglan
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/risktenal
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/riskeyolla
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/risebaglan
-wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/ipassignet
 chmod 777 trust*
 chmod 777 risk*
 chmod 777 ipassignet
