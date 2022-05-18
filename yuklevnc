@@ -1,0 +1,10 @@
+wget https://downloads.realvnc.com/download/file/vnc.files/VNC-Server-6.9.1-Linux-x64.rpm
+yum install -y ./VNC-Server-6.9.1-Linux-x64.rpm
+wget https://downloads.realvnc.com/download/file/viewer.files/VNC-Viewer-6.22.315-Linux-x64.rpm
+yum install -y ./VNC-Viewer-6.22.315-Linux-x64.rpm
+firewall-cmd --zone=public --permanent --add-service=vncserver-x11-serviced
+firewall-cmd --zone=public --permanent --add-service=vncserver-virtuald
+firewall-cmd --reload
+firewall-cmd --list-all
+systemctl enable vncserver-x11-serviced.service --now
+systemctl enable vncserver-virtuald.service --now
