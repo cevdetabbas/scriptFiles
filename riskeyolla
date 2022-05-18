@@ -1,0 +1,1 @@
+scp -i /home/tm/Documents/riskEnaktar.key $1 opc@riskip:/home/opc
