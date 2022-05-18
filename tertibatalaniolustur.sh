@@ -1,3 +1,4 @@
+#!/bin/bash
 yum update -y
 useradd tm
 echo -e .\n.\n|sudo passwd tm
