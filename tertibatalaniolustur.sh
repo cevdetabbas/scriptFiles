@@ -68,6 +68,10 @@ wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklevirtual
 chmod 777 yuklevirtualbox
 mv yuklevirtualbox /bin
 
+# yukle vmware
+
+
+
 
 
 
