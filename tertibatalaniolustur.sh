@@ -69,6 +69,14 @@ chmod 777 yuklevirtualbox
 mv yuklevirtualbox /bin
 
 # yukle vmware
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklevmware
+chmod 777 yuklevmware
+mv yuklevmware /bin
+
+#
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yukleminimalkde
+chmod 777 yukleminimalkde
+mv yukleminimalkde /bin
 
 
 
