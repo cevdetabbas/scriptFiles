@@ -9,3 +9,5 @@ make
 sudo make install
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/99-vmmodules.install
 mv 99-vmmodules.install /etc/kernel/install.d/
+vmware-modconfig --console --install-all
+
