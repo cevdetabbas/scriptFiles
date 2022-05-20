@@ -73,7 +73,7 @@ wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklevmware
 chmod 777 yuklevmware
 mv yuklevmware /bin
 
-#
+# yukle kde
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yukleminimalkde
 chmod 777 yukleminimalkde
 mv yukleminimalkde /bin
