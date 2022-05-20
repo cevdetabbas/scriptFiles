@@ -20,10 +20,12 @@ mkdir /home/tm/Templates
 mkdir /home/tm/Videos
 mkdir /home/tm/VirtualMachines
 mkdir /home/tm/vmware
+mkdir /geciciPictures
+cd /geciciPictures
 git clone https://github.com/cevdetabbas/Pictures.git
-cd Pictures
-mv /yardirbakalim/Pictures/*  /home/tm/Pictures/
-rm -rf /yardirbakalim/geciciPictures
+cd
+mv /geciciPictures/Pictures/*  /home/tm/Pictures/
+rm -rf /geciciPictures
 wget https://raw.githubusercontent.com/cevdetabbas/Enaktarlar/main/riskEnaktar.key
 mv -f riskEnaktar.key /home/tm/Documents/
 chmod 600 /home/tm/Documents/riskEnaktar.key
