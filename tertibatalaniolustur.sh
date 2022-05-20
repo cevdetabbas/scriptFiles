@@ -4,8 +4,26 @@ cd /yardirbakalim
 yum update -y
 yum install -y bash-completion
 yum install -y epel-release
+yum install -y git
+yum install -y vim
 useradd tm
 echo -e .\n.\n|sudo passwd tm
+mkdir /home/tm/Desktop
+mkdir /home/tm/Documetns
+mkdir /home/tm/Downloads
+mkdir /home/tm/IdeaProjects
+mkdir /home/tm/Music
+mkdir /home/tm/Pictures
+mkdir /home/tm/Public
+mkdir /home/tm/PycharmProjects
+mkdir /home/tm/Templates
+mkdir /home/tm/Videos
+mkdir /home/tm/VirtualMachines
+mkdir /home/tm/vmware
+git clone https://github.com/cevdetabbas/Pictures.git
+cd Pictures
+mv /yardirbakalim/Pictures/*  /home/tm/Pictures/
+rm -rf /yardirbakalim/geciciPictures
 wget https://raw.githubusercontent.com/cevdetabbas/Enaktarlar/main/riskEnaktar.key
 mv -f riskEnaktar.key /home/tm/Documents/
 chmod 600 /home/tm/Documents/riskEnaktar.key
