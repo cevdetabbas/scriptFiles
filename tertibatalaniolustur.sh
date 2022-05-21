@@ -9,7 +9,7 @@ yum install -y vim
 useradd tm
 echo -e .\n.\n|sudo passwd tm
 mkdir /home/tm/Desktop
-mkdir /home/tm/Documetns
+mkdir /home/tm/Documents
 mkdir /home/tm/Downloads
 mkdir /home/tm/IdeaProjects
 mkdir /home/tm/Music
