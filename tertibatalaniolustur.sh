@@ -98,6 +98,10 @@ wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yukleminimal
 chmod 777 yukleminimalkde
 mv yukleminimalkde /bin
 
+# yukle gmail
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklegmail
+chmod 777 yuklegmail
+mv yuklegmail /bin
 
 
 
