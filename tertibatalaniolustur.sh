@@ -104,7 +104,7 @@ chmod 777 yuklegmail
 mv yuklegmail /bin
 
 
-su - tm
+echo .\n.\n | su - tm
 
 
 
