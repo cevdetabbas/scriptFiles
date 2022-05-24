@@ -119,7 +119,10 @@ wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklesnapsto
 chmod 777 yuklesnapstore
 mv yuklesnapstore /bin
 
-
+# yukle sublime text editor
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklesublime
+chmod 777 yuklesublime
+mv yuklesublime /bin
 
 
 su - tm
