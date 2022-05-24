@@ -124,6 +124,11 @@ wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklesublime
 chmod 777 yuklesublime
 mv yuklesublime /bin
 
+# yukle vlc 
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklevlc
+chmod 777 yuklevlc
+mv yuklevlc /bin
+
 
 su - tm
 
