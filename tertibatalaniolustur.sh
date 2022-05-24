@@ -104,6 +104,23 @@ wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklegmail
 chmod 777 yuklegmail
 mv yuklegmail /bin
 
+# yukle zoom
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklezoom
+chmod 777 yuklezoom 
+mv yuklezoom /bin
+
+# yukle visual studio
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklevisualstudio
+chmod 777 yuklevisualstudio
+mv yuklevisualstudio /bin
+
+# yukle snapstore
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklesnapstore
+chmod 777 yuklesnapstore
+mv yuklesnapstore /bin
+
+
+
 
 su - tm
 
