@@ -6,6 +6,7 @@ yum install -y bash-completion
 yum install -y epel-release
 yum install -y git
 yum install -y vim
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 useradd tm
 echo -e .\n.\n|sudo passwd tm
 mkdir /home/tm/Desktop
