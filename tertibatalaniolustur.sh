@@ -130,6 +130,11 @@ wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklevlc
 chmod 777 yuklevlc
 mv yuklevlc /bin
 
+# yukle java
+https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklejava
+chmod 777 yuklejava
+mv yuklejava /bin
+
 
 su - tm
 
