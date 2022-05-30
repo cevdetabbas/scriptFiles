@@ -1,6 +1,7 @@
 # akbor http/https
 hostnamectl set-hostname server1.example.com
 yum groups install -y "Basic Web Server"; yum install -y elinks
+systemctl enable httpd --now
 firewall-cmd --permanent --add-service=http
 firewall-cmd --permanent --add-service=https
 firewall-cmd --reload
