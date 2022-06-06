@@ -18,3 +18,4 @@ modprobe nvidia-uvm
 echo "nvidia_uvm" >> /etc/modules-load.d/nvidia-uvm.conf
 usermod -aG video tm
 usermod -aG video root
+flatpak install flathub com.obsproject.Studio
