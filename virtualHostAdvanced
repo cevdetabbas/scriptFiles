@@ -7,6 +7,8 @@ firewall-cmd --permanent --add-service=https
 firewall-cmd --reload
 firewall-cmd --list-all
 
+# /etc/hosts a edit etmek lazim
+
 # to generate default virtualhost put index.html into default documentroot directory
 echo welcome to default virtualhost >> /var/www/html/index.html
 
