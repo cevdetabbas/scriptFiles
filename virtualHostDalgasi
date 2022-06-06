@@ -77,6 +77,23 @@ ________________________________________________________________________________
 semanage fcontext -a -t httpd_sys_content_t "/www(/.*)?"
 restorecon -Rv /www
 
+_________________________________________________________________________________
+certifika dalgasi
+genkey server1.example.com # bu komut iki tane certifica olusturuyor.
+/etc/pki/tls/private/server1.example.com.key
+/etc/pki/tls/certs/server1.example.com.crt
+
+sonra conf u edit et
+
+<VirtualHost *:443>
+documentroot "/var/www/html"
+servername server1.example.com
+errorlog "logs/secure-server1-error.log"
+customlog "logs/secure-server1-access.log" combined
+SSLEngine on
+SSLCertificateFile "/etc/pki/tls/certs/server1.example.com.crt"
+SSLCertificateKeyFile "/etc/pki/tls/private/server1.example.com.key"
+</VirtualHost>
 
 
 
