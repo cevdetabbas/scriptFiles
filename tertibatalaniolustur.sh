@@ -135,6 +135,12 @@ https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklejava
 chmod 777 yuklejava
 mv yuklejava /bin
 
+# yukle protonvpn
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yukleprotonvpn
+chmod 777 yukleprotonvpn
+mv yukleprotonvpn /bin
+
+
 
 su - tm
 
