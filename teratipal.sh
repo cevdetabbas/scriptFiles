@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# yeni bir dosya olustur ismi onemli degil zaten script bittiginde bunu silecek
-mkdir /yardirbakalim
-cd /yardirbakalim
+mkdir /yappistir
+cd /yappistir
+yum update -y
 yum update -y
 yum install -y bash-completion
 yum install -y epel-release
@@ -10,7 +10,6 @@ yum install -y git
 yum install -y vim
 yum install -y gnome-color-manager
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-useradd tm
 echo -e .\n.\n|sudo passwd tm
 mkdir -p /home/tm/Desktop
 mkdir -p /home/tm/Documents
@@ -50,13 +49,13 @@ chmod 777 trustabaglan
 chmod 777 risktenal
 chmod 777 riskeyolla
 chmod 777 riskebaglan
-mv -f ipassignet /bin 
-mv -f trusttanal /bin 
-mv -f trustayolla /bin 
-mv -f trustabaglan /bin 
-mv -f risktenal /bin 
-mv -f riskeyolla /bin 
-mv -f riskebaglan /bin 
+mv -f ipassignet /bin
+mv -f trusttanal /bin
+mv -f trustayolla /bin
+mv -f trustabaglan /bin
+mv -f risktenal /bin
+mv -f riskeyolla /bin
+mv -f riskebaglan /bin
 
 ipassignet $1 $2
 
@@ -109,7 +108,7 @@ mv yuklegmail /bin
 
 # yukle zoom
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklezoom
-chmod 777 yuklezoom 
+chmod 777 yuklezoom
 mv yuklezoom /bin
 
 # yukle visual studio
@@ -127,7 +126,7 @@ wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklesublime
 chmod 777 yuklesublime
 mv yuklesublime /bin
 
-# yukle vlc 
+# yukle vlc
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklevlc
 chmod 777 yuklevlc
 mv yuklevlc /bin
@@ -141,14 +140,3 @@ mv yuklejava /bin
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yukleprotonvpn
 chmod 777 yukleprotonvpn
 mv yukleprotonvpn /bin
-
-
-
-su - tm
-su -
-
-
-
-
-
-
