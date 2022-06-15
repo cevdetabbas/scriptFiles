@@ -145,7 +145,7 @@ mv yukleprotonvpn /bin
 
 
 su - tm
-exit
+su -
 
 
 
