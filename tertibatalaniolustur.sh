@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# yeni bir dosya olustur ismi onemli degil zaten script bittiginde bunu silecek
 mkdir /yardirbakalim
 cd /yardirbakalim
 yum update -y
@@ -143,6 +145,8 @@ mv yukleprotonvpn /bin
 
 
 su - tm
+exit
+
 
 
 
