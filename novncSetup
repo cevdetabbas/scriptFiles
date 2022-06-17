@@ -1,0 +1,11 @@
+yum -y install epel-release
+yum install -y novnc python-websockify numpy
+cd /etc/pki/tls/certs
+openssl req -x509 -nodes -newkey rsa:2084 -keyout /etc/pki/tls/certs/novnc.pem -out /etc/pki/tls/certs/novnc.pem -days 365
+yum install -y tigervnc-server
+su - tm
+vncpasswd
+vncserver :1 -geometry 800x600 -depth 24
+firewall-cmd --permanent --add-service=vnc-server
+firewall-cmd --reload
+websockify -D --web=/usr/share/novnc/ --cert=/etc/pki/tls/certs/novnc.pem 6080 localhost:5901
