@@ -78,7 +78,8 @@ semanage fcontext -a -t httpd_sys_content_t "/www(/.*)?"
 restorecon -Rv /www
 
 _________________________________________________________________________________
-certifika dalgasi
+CERTIFIKA DALGASI
+
 genkey server1.example.com # bu komut iki tane certifica olusturuyor.
 /etc/pki/tls/private/server1.example.com.key
 /etc/pki/tls/certs/server1.example.com.crt

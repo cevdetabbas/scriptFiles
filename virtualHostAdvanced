@@ -43,10 +43,17 @@ deny from all
 allow from 127.0.0.1 ::1 172.16.41.128
 </Directory>
 
+
+# PASSWORD PROTECTED PAGE
+-imdi buradan soyle edecegiz.
+-once bi htmli yaz sonra bi file a yeni bi document root olacak sekilde felan
+htpasswd -c /etc/httpd/.password tm # bu passwordu bu file in icine yazacak user tm olarak.
+-simdide configuration file ini edit etmek lazim.
+
 <Directory "/var/www/html/passworded">
 authtype basic
 authname "password protected directory"
-authuserfile /etc/httpd/.passwords
+authuserfile /etc/httpd/.password
 require valid-user
 </Directory>
 
