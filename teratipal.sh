@@ -12,6 +12,7 @@ yum install -y gnome-color-manager
 sudo dnf install snapd -y
 sudo snap install hello-world
 sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install snap-store
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 echo -e .\n.\n|sudo passwd tm
 mkdir -p /home/tm/Desktop
