@@ -1,8 +1,6 @@
-yum -y install epel-release
-yum install -y novnc python-websockify numpy
+yum -y install epel-release ; yum install -y novnc python-websockify numpy tigervnc-server
 cd /etc/pki/tls/certs
 openssl req -x509 -nodes -newkey rsa:2084 -keyout /etc/pki/tls/certs/novnc.pem -out /etc/pki/tls/certs/novnc.pem -days 365
-yum install -y tigervnc-server
 su - tm
 vncpasswd
 vncserver :1 -geometry 800x600 -depth 24
