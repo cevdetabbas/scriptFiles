@@ -7,7 +7,7 @@ mv tertipal.sh /bin
 
 # yeni bir dosya olustur ismi onemli degil zaten script bittiginde bunu silecek
 useradd tm
-su -l -c 'printf ".\n.\n" | passwd tm'
+su -l -c 'printf ".\n.\n\n" | passwd tm'
 su - tm
 exit
 
