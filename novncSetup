@@ -5,6 +5,7 @@ su - tm
 vncpasswd
 vncserver :1 -geometry 800x600 -depth 24
 firewall-cmd --permanent --add-service=vnc-server
-firewall-cmd --permanent --add-port=6080/tcp
 firewall-cmd --reload
 websockify -D --web=/usr/share/novnc/ --cert=/etc/pki/tls/certs/novnc.pem 6080 localhost:5901
+firewall-cmd --permanent --add-port=6080/tcp
+firewall-cmd --reload
