@@ -8,8 +8,7 @@ mv tertipal.sh /bin
 # yeni bir dosya olustur ismi onemli degil zaten script bittiginde bunu silecek
 useradd tm
 su -l -c 'printf ".\n.\n\n" | passwd tm'
-su - tm
-exit
+
 
 
 mkdir -p /home/tm/Desktop /home/tm/Documents /home/tm/Downloads /home/tm/IdeaProjects /home/tm/Music /home/tm/Pictures /home/tm/Public /home/tm/PycharmProjects /home/tm/Templates /home/tm/Videos /home/tm/VirtualMachines /home/tm/vmware
