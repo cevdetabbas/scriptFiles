@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # yeni bir dosya olustur ismi onemli degil zaten script bittiginde bunu silecek
-mkdir /yardirbakalim
+
 cd /yardirbakalim
 yum update -y
 yum install -y bash-completion

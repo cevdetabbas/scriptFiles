@@ -9,6 +9,9 @@ yum install -y epel-release
 yum install -y git
 yum install -y vim
 yum install -y gnome-color-manager
+sudo dnf install snapd -y
+sudo snap install hello-world
+sudo ln -s /var/lib/snapd/snap /snap
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 echo -e .\n.\n|sudo passwd tm
 mkdir -p /home/tm/Desktop
@@ -75,11 +78,6 @@ mv yuklechrome /bin
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklevnc
 chmod 777 yuklevnc
 mv yuklevnc /bin
-
-# yukle snapd
-wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklesnapd
-chmod 777 yuklesnapd
-mv yuklesnapd /bin
 
 # yukle idea toolbox
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yukleideatoolbox
