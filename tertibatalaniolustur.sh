@@ -1,5 +1,10 @@
 #!/bin/bash
 
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/tertipal.sh
+chmod 777 tertipal.sh
+mv tertipal.sh /bin
+/bin/tertipal.sh
+
 # yeni bir dosya olustur ismi onemli degil zaten script bittiginde bunu silecek
 
 cd /yardirbakalim
