@@ -88,3 +88,8 @@ wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yukleprotonv
 chmod 777 yukleprotonvpn
 mv yukleprotonvpn /bin
 
+# yukle novnc
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklenovnc
+chmod 777 yuklenovnc
+mv yuklenovnc /bin
+
