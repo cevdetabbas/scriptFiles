@@ -6,6 +6,7 @@ yum install -y epel-release
 yum install -y git
 yum install -y vim
 yum install -y gnome-color-manager
+yum install -y java-1.8.0-openjdk*
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # yukle nomachine
@@ -77,11 +78,6 @@ mv yuklesublime /bin
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklevlc
 chmod 777 yuklevlc
 mv yuklevlc /bin
-
-# yukle java
-wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklejava
-chmod 777 yuklejava
-mv yuklejava /bin
 
 # yukle protonvpn
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yukleprotonvpn
