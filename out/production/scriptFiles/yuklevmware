@@ -1,0 +1,20 @@
+wget https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-16.1.0-17198959.x86_64.bundle
+sudo dnf install kernel-devel kernel-headers gcc gcc-c++ make git -y
+yum install -y epel-release
+yum groupinstall "Development Tools" -y 
+yum groupinstall “VMware platform specific packages” -y
+rpm -qa | grep kernel-headers 
+yum install kernel-headers -y 
+yum install kernel-devel -y
+yum install wget -y
+chmod 777 VMware-Workstation-Full-16.1.0-17198959.x86_64.bundle 
+./VMware-Workstation-Full-16.1.0-17198959.x86_64.bundle
+wget https://github.com/mkubecek/vmware-host-modules/archive/workstation-16.1.0.tar.gz
+tar -xzf workstation-6.1.0.tar.gz
+cd vmware-host-modules-workstation-16.1.0
+make
+sudo make install
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/99-vmmodules.install
+mv 99-vmmodules.install /etc/kernel/install.d/
+vmware-modconfig --console --install-all
+

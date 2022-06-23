@@ -1,0 +1,7 @@
+wget https://protonvpn.com/download/protonvpn-stable-release-1.0.1-1.noarch.rpm
+sudo dnf update -y
+sudo dnf install protonvpn -y
+sudo dnf install python3-pip python3-pip -y
+pip3 install --user dnspython>=1.16.0 
+sudo dnf install libappindicator-gtk3 gnome-tweaks gnome-shell-extension-appindicator -y
+sudo dnf install gnome-extensions-app  -y

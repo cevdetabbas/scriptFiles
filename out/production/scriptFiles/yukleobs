@@ -1,0 +1,21 @@
+echo snapd yuklensin
+sudo dnf install snapd -y
+sudo snap install hello-world
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install snap-store
+snap install obs-studio
+snap connect obs-studio:removable-media
+snap connect obs-studio:alsa
+snap connect obs-studio:jack1
+snap connect obs-studio:audio-record
+snap connect obs-studio:avahi-control
+snap connect obs-studio:camera
+snap connect obs-studio:raw-usb
+snap connect obs-studio:kernel-module-observe
+snap connect obs-studio:password-manager-service
+snap connect obs-studio:joystick
+modprobe nvidia-uvm
+echo "nvidia_uvm" >> /etc/modules-load.d/nvidia-uvm.conf
+usermod -aG video tm
+usermod -aG video root
+flatpak install flathub com.obsproject.Studio

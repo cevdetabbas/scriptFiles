@@ -1,0 +1,9 @@
+yum update -y
+yum groupinstall "X Window System" -y
+yum groupinstall -y "KDE"
+yum groupinstall "Fonts" -y
+yum install kde-workspace -y
+yum install gdm -y
+systemctl set-default graphical.target
+yum install -y open-vm-tools
+reboot

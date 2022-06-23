@@ -1,0 +1,103 @@
+# Virtual hosts
+
+yum groupinstall -y "Basic Web Server"
+systemctl enable httpd --now
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+
+# Configuration Files
+vim /etc/httpd/conf/httpd.conf ---> ServerRoot Listen 80 ServerName ServerAdmin
+
+# Default Document Root
+vim /var/www/html/index.html ---> Buraya biliyon iste document root
+
+# Eger Port Degistirmek Istesen
+semanage port -l | grep http
+
+# Access Control List Dalgasi
+groupadd webmasters
+setfacl -R -m g:webmasters:rwX /var/www/html ---> bu directoryler icun
+setfacl -R -m d:g:webmasters:rwx /var/www/html ---> ya bunu iste yapican
+
+# Virtual host olusturmak icin eger dns server yoksa /etc/hosts a bakmak lazim
+hostnamectl set-hostname server1.example.com
+1.1.1.1 sales.example.com  sales ---> simdi bu ayni makinanin ip adresine gidcek
+1.1.1.1 account.example.com account ---> ayni dalga
+
+---> /etc/httpd/conf/httpd.conf  ---> bunu editlemek mi lazim nedir bu asagidaki orjinali bunu eger baska bi document root yapmak istiyosak eklemek lazim altina
+_________________________________________________________________________________
+|DocumentRoot "/var/www/html"
+|
+|#
+|# Relax access to content within /var/www.
+|#
+|<Directory "/var/www">
+|    AllowOverride None
+|    # Allow open access:
+|    Require all granted
+|</Directory>
+_________________________________________________________________________________
+bunun altina bunu ekle
+_________________________________________________________________________________
+<Directory "/www/docs">
+    AllowOverride None
+    Require all granted
+</Directory>
+_________________________________________________________________________________
+bitti
+
+--->webmaster diye bi group olusturmak lazim
+
+
+# simdi bu olusturdugumuz yeni DocumentRootlar icin yeni configurationi file lari olusturmamiz lazim onlarida 
+vim /etc/httpd/conf.d/account.example.com.conf
+---> bunun icine bunlari yazicaz 
+_______________________________________________________________________________
+<VirtualHost *:80>
+ServerAdmin webmaster@account.example.com
+DocumentRoot /www/docs/account.example.com
+ServerName account.example.com
+ErrorLog logs/account.example.com-error_log
+#CustomLog logs/account.example.com-custom_log
+</VirtualHost>
+_______________________________________________________________________________
+bitti
+
+--->simdi DocumentRoot u biz create edicez icinede index.html koyacaz
+mkdir -p /www/docs/account.example.com ---> iste buraya index.html yapican
+
+--->en son selinux kaldi. once man page e gidip bakicaz 
+man semanage-fcontext
+--->examples lardan ilkini copyalicaz ve kendi direcory mizini ismiyle degistiricez
+_________________________________________________________________________________
+|semanage fcontext -a -t httpd_sys_content_t "/web(/.*)?"
+|restorecon -Rv /web
+_________________________________________________________________________________
+--->yukardakini soyle degisitircez iste artik DocumentRoot un adi neyse
+semanage fcontext -a -t httpd_sys_content_t "/www(/.*)?"
+restorecon -Rv /www
+
+_________________________________________________________________________________
+CERTIFIKA DALGASI
+
+genkey server1.example.com # bu komut iki tane certifica olusturuyor.
+/etc/pki/tls/private/server1.example.com.key
+/etc/pki/tls/certs/server1.example.com.crt
+
+sonra conf u edit et
+
+<VirtualHost *:443>
+documentroot "/var/www/html"
+servername server1.example.com
+errorlog "logs/secure-server1-error.log"
+customlog "logs/secure-server1-access.log" combined
+SSLEngine on
+SSLCertificateFile "/etc/pki/tls/certs/server1.example.com.crt"
+SSLCertificateKeyFile "/etc/pki/tls/private/server1.example.com.key"
+</VirtualHost>
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+//  centos 7 ikinci secenek, public key 99gb storage create. 
+
+//  ssh -i key ile baglan update sonra graphical mevzusu
+
+//  centos minimal desktop
+yum update -y
+yum groupinstall "X Window System" -y
+yum install gnome-classic-session gnome-terminal nautilus-open-terminal control-center liberation-mono-fonts -y
+unlink /etc/systemd/system/default.target
+ln -sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target
+reboot 
+
+// bu hem cinnamon hem gnome u yukluyo
+sudo yum install epel-release -y ;sudo yum groupinstall -y "server with GUI" ; sudo yum groupinstall -y "cinnamon desktop";sudo systemctl set-default graphical.target ;reboot
+
+//  sadeli kde trial <<<+++__+++>>> calisti
+yum groupinstall "X Window System" -y
+yum groupinstall "Fonts" -y 
+yum install gdm kde-workspace -y 
+unlink /etc/systemd/system/default.target
+ln -sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target
+ll /etc/systemd/system/default.target
+reboot
+
+//  nomachine yukle 
+wget https://download.nomachine.com/download/7.7/Linux/nomachine_7.7.4_1_x86_64.rpm
+yum install -y ./nomachine_7.7.4_1_x86_64.rpm
+
+//  LAMP SERVER
+
+yum install -y epel-release 
+yum install -y httpd mariadb mariadb-server php php-mysql phpMyAdmin
+systemctl enable --now httpd mariadb
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --reload
+firewall-cmd --list-all
+
+mysql_secure_installation
+##vim /etc/httpd/conf.d/phpMyAdmin.conf #burda <requiredlari all granted la degistirmek lazim## Require ip 127.0.0.1 bunu all granted ile degi
+
+<IfModule mod_authz_core.c>
+     # Apache 2.4
+     <RequireAny>
+       Require all granted
+       Require ip ::1
+     </RequireAny>
+   </IfModule>
+   <IfModule !mod_authz_core.c>
+     # Apache 2.2
+     Order Deny,Allow
+     Deny from All
+     Allow from All
+     Allow from ::1
+   </IfModule>
+
+
+###ayarlari
+mysql_secure_installation
+mysql -u root -p
+show databases;
+create database dbname;
+use dbname;
+describe jevodb;
+create table jevodb(col1(varchar(40), col1(varchar(40));
+select * from dbname;
+insert into dbname(col1, col2) values("col1row1value", "col2row1value");
+create user tm@'%' identified by '.';
+drop user
+grant select,insert,update,delete on dbname.* to tm@'%';
+flush privileges;
+show grants for tm@'%';
+
+
+// shellinabox ... wettynin amk
+yum install -y epel-release ; yum install -y yum-utils openssl shellinabox -y
+systemctl enable shellinaboxd --now
+
+
+
+
+

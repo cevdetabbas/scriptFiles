@@ -1,0 +1,5 @@
+wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.24.11947.tar.gz
+tar xvf jetbrains-toolbox-1.24.11947.tar.gz
+cd jetbrains-toolbox-1.24.11947
+chmod 777 jetbrains-toolbox
+./jetbrains-toolbox
