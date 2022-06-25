@@ -7,6 +7,10 @@ yum install -y git
 yum install -y vim
 yum install -y gnome-color-manager
 yum install -y java-1.8.0-openjdk*
+sudo yum install snapd -y
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install snap-store
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # yukle nomachine
@@ -23,11 +27,6 @@ mv yuklechrome /bin
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklevnc
 chmod 777 yuklevnc
 mv yuklevnc /bin
-
-# yukle snapd
-wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklesnapd
-chmod 777 yuklesnapd
-mv yuklesnapd /bin
 
 # yukle idea toolbox
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yukleideatoolbox
@@ -63,11 +62,6 @@ mv yuklezoom /bin
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklevisualstudio
 chmod 777 yuklevisualstudio
 mv yuklevisualstudio /bin
-
-# yukle snapstore
-wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklesnapstore
-chmod 777 yuklesnapstore
-mv yuklesnapstore /bin
 
 # yukle sublime text editor
 wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklesublime
