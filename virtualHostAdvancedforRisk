@@ -1,0 +1,22 @@
+# akbor http/https
+hostnamectl set-hostname risk.cevdetabbas.com
+yum groups install -y "Basic Web Server"; yum install -y elinks
+systemctl enable httpd --now
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --reload
+firewall-cmd --list-all
+
+genkey risk.cevdetabbas.com
+
+vim /etc/httpd/conf.d/_vhost.conf
+<VirtualHost *:443>
+        DocumentRoot /var/www/html
+        ServerName risk.cevdetabbas.com
+        errorlog "logs/secure-risk-error.log"
+        customlog "logs/secure-risk-access.log" combined
+        SSLEngine on
+        SSLCertificateFile /etc/pki/tls/certs/risk.cevdetabbas.com.crt
+        SSLCertificateKeyFile /etc/pki/tls/private/risk.cevdetabbas.com.key
+</VirtualHost>
+
