@@ -1,0 +1,22 @@
+yum install -y epel-release
+yum install -y httpd mariadb mariadb-server php php-mysql phpMyAdmin
+yum groupinstall -y "Basic Web Server"
+systemctl enable httpd mariadb.service --now
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --permanent --add-service=mysql
+firewall-cmd --reload
+firewall-cmd --list-all
+
+
+mysql_secure_installation
+
+<VirtualHost *:443>
+        DocumentRoot /var/www/html
+        ServerName server1.example.com
+        errorlog "logs/secure-server1-error.log"
+        customlog "logs/secure-server1-access.log" combined
+        SSLEngine on
+        SSLCertificateFile /etc/pki/tls/certs/server1.example.com.crt
+        SSLCertificateKeyFile /etc/pki/tls/private/server1.example.com.key
+</VirtualHost>
