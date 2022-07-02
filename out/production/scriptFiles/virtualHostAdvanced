@@ -57,15 +57,7 @@ authuserfile /etc/httpd/.password
 require valid-user
 </Directory>
 
-<VirtualHost *:443>
-        DocumentRoot /var/www/html
-        ServerName server1.example.com
-        errorlog "logs/secure-server1-error.log"
-        customlog "logs/secure-server1-access.log" combined
-        SSLEngine on
-        SSLCertificateFile /etc/pki/tls/certs/server1.example.com.crt
-        SSLCertificateKeyFile /etc/pki/tls/private/server1.example.com.key
-</VirtualHost>
+
 
 
 
@@ -76,7 +68,13 @@ genkey server1.example.com # bu iki tane file olusturuyor
 output will be written to /etc/pki/tls/certs/server1.example.com.crt
 output key written to /etc/pki/tls/private/server1.example.com.key
 
-# Password protected directory
----> bir folder olustur ve index.html yaz icine
----> document root u configuration file a yaz conf.d nin icindekine yukarda ornegi var
-htpasswd -c /etc/httpd/.passwords  ---> bu passwordlerin store edilecegi file
+<VirtualHost *:443>
+        DocumentRoot /var/www/html
+        ServerName server1.example.com
+        errorlog "logs/secure-server1-error.log"
+        customlog "logs/secure-server1-access.log" combined
+        SSLEngine on
+        SSLCertificateFile /etc/pki/tls/certs/server1.example.com.crt
+        SSLCertificateKeyFile /etc/pki/tls/private/server1.example.com.key
+</VirtualHost>
+

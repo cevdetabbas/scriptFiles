@@ -83,3 +83,13 @@ wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklenovnc
 chmod 777 yuklenovnc
 mv yuklenovnc /bin
 
+# yukle cockpit
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklecockpit
+chmod 777 yuklecockpit
+mv yuklecockpit /bin
+
+# yukle git newer version
+wget https://raw.githubusercontent.com/cevdetabbas/scriptFiles/main/yuklegitnewerversion
+chmod 777 yuklegitnewerversion
+mv yuklegitnewerversion /bin
+
