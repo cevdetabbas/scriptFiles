@@ -20,4 +20,3 @@ vim /etc/httpd/conf.d/_vhost.conf
         SSLCertificateKeyFile /etc/pki/tls/private/risk.cevdetabbas.com.key
 </VirtualHost>
 
-

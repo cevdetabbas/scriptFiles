@@ -1,0 +1,2 @@
+@reboot java CreateRandomUsername
+@reboot mkdir /var/www/html/kamil

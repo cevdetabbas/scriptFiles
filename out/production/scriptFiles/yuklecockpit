@@ -1,0 +1,6 @@
+yum install -y epel-release
+yum install -y cockpit
+systemctl enable cockpit.socket --now
+firewall-cmd --permanent --add-service=cockpit
+firewall-cmd --reload
+firewall-cmd --list-all
