@@ -1,3 +1,5 @@
+useradd tm
+sudo su -l -c 'printf ".\n.\n\n" | passwd tmm'
 yum -y install epel-release ; yum install -y novnc python-websockify numpy tigervnc-server
 cd /etc/pki/tls/certs
 printf "\n\n\n\n\n\n\n" | openssl req -x509 -nodes -newkey rsa:2084 -keyout /etc/pki/tls/certs/novnc.pem -out /etc/pki/tls/certs/novnc.pem -days 36500
