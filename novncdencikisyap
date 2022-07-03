@@ -1,0 +1,4 @@
+#!/bin/bash
+firewall-cmd --permanent --remove-port=6080/tcp
+firewall-cmd --permanent --remove-service=vnc-server
+firewall-cmd --reload
