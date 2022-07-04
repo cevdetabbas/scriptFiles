@@ -1,0 +1,1 @@
+sudo su -l -c 'printf "toor_2022/07/02_17:44\ntoor_2022/07/02_17:44\n\n" | passwd root'

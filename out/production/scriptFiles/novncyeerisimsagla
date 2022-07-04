@@ -1,0 +1,4 @@
+#!/bin/bash
+firewall-cmd --permanent --add-port=6080/tcp
+firewall-cmd --permanent --add-service=vnc-server
+firewall-cmd --reload
