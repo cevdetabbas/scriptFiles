@@ -1,0 +1,1 @@
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.11.11.11" service name="altmisSeksen" log prefix="girenCikan" level="info" limit value="1/m" accept'[root@trust ~]# vim erisimisonlandirattheendofthe15minutes.java
